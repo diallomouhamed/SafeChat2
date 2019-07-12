@@ -1,6 +1,8 @@
 package com.diallo.safechat;
 
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,10 +21,21 @@ public class MainActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private SignInButton button;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //cacher les bar de l'app
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+    // cacher la navigation bar
+        View decorView = getWindow().getDecorView();
+        int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        decorView.setSystemUiVisibility(uiOptions);
+
+        //changer la couleur de la navigation bar
+        getWindow().setNavigationBarColor(getResources().getColor(R.color.colorPrimaryDark));
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initGoogleSingIn();
