@@ -3104,8 +3104,8 @@ public final class R {
     public static final int abc_search_dropdown_item_icons_2line=0x7f090018;
     public static final int abc_search_view=0x7f090019;
     public static final int abc_select_dialog_material=0x7f09001a;
-    public static final int activity_fragment=0x7f09001b;
-    public static final int activity_home=0x7f09001c;
+    public static final int activity_camera=0x7f09001b;
+    public static final int activity_fragment=0x7f09001c;
     public static final int activity_main=0x7f09001d;
     public static final int fragment_contact=0x7f09001e;
     public static final int fragment_conversation=0x7f09001f;

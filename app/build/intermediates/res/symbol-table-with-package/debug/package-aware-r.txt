@@ -849,8 +849,8 @@ layout abc_screen_toolbar
 layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
+layout activity_camera
 layout activity_fragment
-layout activity_home
 layout activity_main
 layout fragment_contact
 layout fragment_conversation

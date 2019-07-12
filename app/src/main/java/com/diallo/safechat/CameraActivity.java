@@ -41,7 +41,7 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
 
-public class HomeActivity extends AppCompatActivity implements TextureView.SurfaceTextureListener, ActivityCompat.OnRequestPermissionsResultCallback {
+public class CameraActivity extends AppCompatActivity implements TextureView.SurfaceTextureListener, ActivityCompat.OnRequestPermissionsResultCallback {
 
     private AutoFitTextureView mTextureView;
     private static final int REQUEST_CAMERA_PERMISSION = 1;
@@ -109,7 +109,7 @@ public class HomeActivity extends AppCompatActivity implements TextureView.Surfa
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_camera);
         mTextureView = new AutoFitTextureView(this);
         mTextureView.setSurfaceTextureListener(this);
         setContentView(mTextureView);
@@ -317,7 +317,7 @@ public class HomeActivity extends AppCompatActivity implements TextureView.Surfa
             mCameraOpenCloseLock.release();
             cameraDevice.close();
             mCameraDevice = null;
-            Activity activity = HomeActivity.this;
+            Activity activity = CameraActivity.this;
             if (null != activity) {
                 activity.finish();
             }
