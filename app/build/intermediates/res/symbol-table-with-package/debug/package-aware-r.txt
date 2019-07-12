@@ -364,6 +364,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color blackColorPrimary
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -700,7 +701,6 @@ id barrier
 id beginning
 id blocking
 id bottom
-id btnCapture
 id buttonPanel
 id cancel_action
 id chains
@@ -801,7 +801,6 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
-id textureView
 id time
 id title
 id titleDividerNoCustom

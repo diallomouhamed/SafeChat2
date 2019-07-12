@@ -7,7 +7,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Chat Fragment"
+        android:text="Contact Fragment"
         android:gravity="center"
         android:textColor="@android:color/white"/>
 </LinearLayout>
