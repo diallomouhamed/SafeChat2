@@ -38,9 +38,9 @@ public class FragmentActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch(position){
                 case 0:
-                    return ChatFragment.newInstance();
+                    return ContactFragment.newInstance();
                 case 1:
-                    return CameraFragment.newInstance();
+                    return ConversationFragment.newInstance();
                 case 2:
                     return LocationFragment.newInstance();
 
