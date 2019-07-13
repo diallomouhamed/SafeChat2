@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+     android:layout_width="match_parent">
+
+    <item
+        android:id="@+id/cam"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="Deconnexion"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/disconnect"
+        android:enabled="true"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="Deconnexion"
+        app:showAsAction="ifRoom" />
+</menu>
+

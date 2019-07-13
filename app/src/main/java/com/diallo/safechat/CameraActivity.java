@@ -27,6 +27,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Size;
 import android.util.SparseIntArray;
+import android.view.Menu;
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
@@ -105,9 +106,13 @@ public class CameraActivity extends AppCompatActivity implements TextureView.Sur
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.bottom_nav_menu, menu);
+        return true;
+    }
+
     protected void onCreate(Bundle savedInstanceState) {
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
         mTextureView = new AutoFitTextureView(this);

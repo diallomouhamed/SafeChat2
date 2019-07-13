@@ -1,5 +1,6 @@
 package com.diallo.safechat;
 
+import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
@@ -8,9 +9,14 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.View;
+import android.widget.Button;
+
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class FragmentActivity extends AppCompatActivity {
 
+    Button button;
     FragmentPagerAdapter adapterViewPager;
 
     @Override
@@ -22,8 +28,14 @@ public class FragmentActivity extends AppCompatActivity {
 
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapterViewPager);
-        viewPager.setCurrentItem(1);
+        viewPager.setCurrentItem(0);
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.bottom_nav_menu, menu);
+        return true;
     }
 
     public static class MyPagerAdapter extends FragmentPagerAdapter {
