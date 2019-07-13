@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
 
         if(account != null) {
-            Intent fragmentActivity = new Intent(MainActivity.this, FragmentActivity.class);
+            Intent fragmentActivity = new Intent(MainActivity.this, CameraActivity.class);
             startActivity(fragmentActivity);
         } else {
             forceSignIn();
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if(requestCode == REQUEST_CODE_SIGN_IN) {
-            Intent fragmentActivity = new Intent(MainActivity.this, FragmentActivity.class);
+            Intent fragmentActivity = new Intent(MainActivity.this, CameraActivity.class);
             startActivity(fragmentActivity);
         }
     }

@@ -1,0 +1,4 @@
+#Sat Jul 13 12:48:03 CEST 2019
+base.0=C\:\\Users\\Mouhamed DIALLO\\Desktop\\SafeChat2 - Bon\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\9
+path.0=classes.dex
+renamed.0=classes.dex
