@@ -1,4 +1,0 @@
-#Sat Jul 13 05:43:43 CEST 2019
-base.0=E\:\\MySpace\\COURS_MASTER\\Reactive_programming\\SafeChat2\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
-path.0=classes.dex
-renamed.0=classes.dex

@@ -27,5 +27,4 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     // auth library
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
-    implementation 'com.android.support:design:28.0.0'
 }
