@@ -5,58 +5,28 @@
     build-mode="COLD"
     density="xhdpi"
     format="10"
-    ir-eligibility="R_CLASS_CHANGE"
+    ir-eligibility="COMPATIBLE"
     plugin-version="3.4.2"
-    timestamp="1562986761595"
+    timestamp="1562989421787"
     token="5559908221222576378"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="1193" />
+        duration="271" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="51" />
+        duration="50" />
     <task
         name="verifier"
-        duration="57" />
+        duration="25" />
 
-    <artifact
-        location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
     <artifact
         location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
         type="SPLIT" />
-    <artifact
-        location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-        type="SPLIT" />
-    <artifact
-        location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
@@ -108,9 +78,6 @@
             location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
             location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
@@ -137,6 +104,15 @@
         <artifact
             location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="COLD"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1562989421787"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="E:\MySpace\COURS_MASTER\Reactive_programming\SafeChat2\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
+            type="SPLIT" />
     </build>
 
 </instant-run>

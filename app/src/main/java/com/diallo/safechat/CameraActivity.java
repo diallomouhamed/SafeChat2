@@ -22,15 +22,17 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
+import android.support.v4.view.GestureDetectorCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
+import android.view.GestureDetector;
 import android.view.Menu;
+import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.TextureView;
-import android.view.View;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -49,6 +51,7 @@ public class CameraActivity extends AppCompatActivity implements TextureView.Sur
     private static final int MAX_PREVIEW_WIDTH = 1920;
     private static final int MAX_PREVIEW_HEIGHT = 1080;
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
+    private GestureDetectorCompat mDetector;
 
     static {
         ORIENTATIONS.append(Surface.ROTATION_0, 90);
@@ -119,15 +122,40 @@ public class CameraActivity extends AppCompatActivity implements TextureView.Sur
         mTextureView.setSurfaceTextureListener(this);
         setContentView(mTextureView);
 
-        mTextureView.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                // Nous prenons une photo
-                if (mCameraDevice != null) {
-                    takePicture();
-                }
-            }
-        });
+        mDetector = new GestureDetectorCompat(this, new MyGestureListener());
+
         affiche();
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event){
+        this.mDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+    class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
+        private static final String DEBUG_TAG = "Gestures";
+
+        @Override
+        public void onLongPress(MotionEvent event) {
+            Log.d(DEBUG_TAG,"Longpress: " + event.toString());
+            takePicture();
+        }
+
+        @Override
+        public boolean onSingleTapConfirmed(MotionEvent event) {
+            Log.d(DEBUG_TAG,"SingleTap: " + event.toString());
+            Intent fragmentActivity = new Intent(CameraActivity.this, FragmentActivity.class);
+            startActivity(fragmentActivity);
+            return true;
+        }
+
+
+        @Override
+        public boolean onDown(MotionEvent event) {
+            Log.d(DEBUG_TAG,"onDown: " + event.toString());
+            return true;
+        }
     }
 
 
