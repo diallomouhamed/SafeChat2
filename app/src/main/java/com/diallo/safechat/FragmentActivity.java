@@ -10,13 +10,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
+import android.widget.Toast;
 
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class FragmentActivity extends AppCompatActivity {
 
-    Button button;
     FragmentPagerAdapter adapterViewPager;
 
     @Override
@@ -29,7 +27,13 @@ public class FragmentActivity extends AppCompatActivity {
         adapterViewPager = new MyPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapterViewPager);
         viewPager.setCurrentItem(0);
+    }
 
+    public void setToConversationFragment(String email) {
+        Intent intent = getIntent();
+        intent.putExtra("emailContact", email);
+        ViewPager viewPager = findViewById(R.id.viewPager);
+        viewPager.setCurrentItem(1);
     }
 
     @Override
