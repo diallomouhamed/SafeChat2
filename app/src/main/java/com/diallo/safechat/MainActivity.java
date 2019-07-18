@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         //cacher les bar de l'app
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-    // cacher la navigation bar
+        // cacher la navigation bar
         View decorView = getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
         decorView.setSystemUiVisibility(uiOptions);
